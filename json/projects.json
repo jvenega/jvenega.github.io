@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Intranet Kyokushin",
+    "description": "Sistema de gestión para organización deportiva con autenticación, roles y contenido dinámico.",
+    "image": "assets/img/kyokushin.png",
+    "demo": "https://jvenega.github.io/kyokushin",
+    "repo": "https://github.com/jvenega/intranet-kyokushin"
+  },
+  {
+    "title": "Panel Admin con Docker",
+    "description": "Dashboard para gestión de infraestructura, contenedores y datos en tiempo real usando React y Django.",
+    "image": "assets/img/admin.png",
+    "demo": "https://jvenega.github.io/admin-docker",
+    "repo": "https://github.com/jvenega/panel-docker-admin"
+  },
+  {
+    "title": "Control de Inventario Excel+VBA",
+    "description": "Planilla automatizada con macros, KPIs y control de stock para departamentos internos.",
+    "image": "assets/img/excel.png",
+    "demo": "https://jvenega.github.io/excel-inventario",
+    "repo": "https://github.com/jvenega/inventario-vba"
+  }
+]

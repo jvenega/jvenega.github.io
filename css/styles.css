@@ -1,29 +1,48 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
   color: #333;
+  line-height: 1.6;
 }
 
-header {
-  background: #003366;
+.hero {
+  background: linear-gradient(to right, #003366, #005999);
   color: white;
   padding: 2rem;
   text-align: center;
 }
 
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 1rem;
+}
+
 main {
   padding: 2rem;
+  max-width: 800px;
+  margin: auto;
 }
 
 section {
   margin-bottom: 2rem;
 }
 
+h2 {
+  color: #005999;
+}
+
+a {
+  color: #005999;
+  text-decoration: none;
+}
+
 footer {
-  background: #222;
-  color: white;
   text-align: center;
   padding: 1rem;
+  background: #eee;
+  font-size: 0.9rem;
 }
