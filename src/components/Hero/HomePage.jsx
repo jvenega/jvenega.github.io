@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
- return (
+  return (
     <section className="relative flex h-screen flex-col items-center justify-center bg-gradient-to-b from-black via-slate-900 to-blue-950 text-center">
       {/* Badge */}
       <motion.div
@@ -44,19 +45,28 @@ export default function Hero() {
         Fullstack Developer | React · Django · Automatización TI
       </motion.p>
 
-      {/* CTA */}
+      {/* CTAs */}
       <motion.div
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 1 }}
         className="mt-8 flex gap-4"
       >
-        <a className="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-xl text-white font-semibold flex items-center gap-2">
+        <Link
+          to="/projects"
+          className="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-xl text-white font-semibold flex items-center gap-2"
+          aria-label="Ver proyectos"
+        >
           Ver proyectos <ArrowRightIcon className="h-5 w-5" />
-        </a>
-        <a className="border border-blue-600 bg-blue-900/40 hover:bg-blue-800 px-6 py-3 rounded-xl text-blue-200 font-semibold">
+        </Link>
+
+        <Link
+          to="/contact"
+          className="border border-blue-600 bg-blue-900/40 hover:bg-blue-800 px-6 py-3 rounded-xl text-blue-200 font-semibold"
+          aria-label="Ir a contacto"
+        >
           Contacto
-        </a>
+        </Link>
       </motion.div>
     </section>
   );
