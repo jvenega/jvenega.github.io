@@ -1,0 +1,102 @@
+:root {
+  --bg: #0b1220;
+  --card: #121a2b;
+  --text: #e6eaf2;
+  --muted: #a8b0c2;
+  --accent: #6aa0ff;
+}
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Segoe UI, Roboto, Arial;
+  background: var(--bg);
+  color: var(--text)
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none
+}
+
+.app {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  position: sticky;
+  top: 0;
+  background: #0b1220cc;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #1e2538
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: .3px
+}
+
+.dot {
+  color: var(--accent)
+}
+
+.nav nav a {
+  margin-left: 16px;
+  opacity: .9
+}
+
+.nav nav a.active {
+  border-bottom: 2px solid var(--accent)
+}
+
+.container {
+  width: min(1000px, 92%);
+  margin: 32px auto;
+  flex: 1
+}
+
+section h1 {
+  font-size: 28px;
+  margin: 0 0 8px
+}
+
+.cards {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  padding: 0;
+  list-style: none
+}
+
+.card {
+  background: var(--card);
+  padding: 16px;
+  border: 1px solid #1e2538;
+  border-radius: 14px
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 12px;
+  background: var(--accent);
+  color: #0b1220;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600
+}
+
+.footer {
+  opacity: .7;
+  padding: 24px;
+  text-align: center;
+  border-top: 1px solid #1e2538
+}
