@@ -1,7 +1,8 @@
-import Hero from "../components/Hero/HomePage";
+import Hero from "../components/pages/home/Hero/HomePage";
+
 export default function Home() {
   return (
-    <section>
+    <section className="h-full">
       <Hero />
     </section>
   );

@@ -1,0 +1,64 @@
+# Normalización de finales de línea
+*               text=auto
+
+# Archivos que DEBEN ir con LF (evita errores en scripts/CI)
+*.sh            text eol=lf
+*.bash          text eol=lf
+*.yml           text eol=lf
+*.yaml          text eol=lf
+*.md            text eol=lf
+*.js            text eol=lf
+*.jsx           text eol=lf
+*.ts            text eol=lf
+*.tsx           text eol=lf
+*.json          text eol=lf
+*.css           text eol=lf
+*.scss          text eol=lf
+*.svg           text eol=lf
+*.html          text eol=lf
+
+# Archivos típicos de Windows que pueden usar CRLF
+*.bat           text eol=crlf
+*.cmd           text eol=crlf
+*.ps1           text eol=crlf
+*.psm1          text eol=crlf
+*.psd1          text eol=crlf
+
+# Marcar binarios (sin conversión ni diff)
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.gif           binary
+*.webp          binary
+*.ico           binary
+*.pdf           binary
+*.woff          binary
+*.woff2         binary
+*.ttf           binary
+*.eot           binary
+*.mp4           binary
+*.mov           binary
+*.zip           binary
+*.7z            binary
+
+# Diffs más útiles
+*.md            diff=markdown
+*.css           diff=css
+*.scss          diff=css
+*.svg           -diff           # los SVG suelen ser ruidosos; desactiva diff (opcional)
+*.min.js        -diff           # minificados no aportan en diffs
+
+# Locks y merges (reduce conflictos ruidosos)
+package-lock.json  merge=ours   -diff
+yarn.lock          merge=ours   -diff
+pnpm-lock.yaml     merge=ours   -diff
+
+# Archivos generados (ocúltalos de las estadísticas de GitHub)
+dist/**                linguist-generated=true
+dist-ssr/**            linguist-generated=true
+*.min.*                linguist-generated=true
+
+# Casos particulares de texto forzado (por si algún binario se cuela)
+.gitattributes     text eol=lf
+.gitignore         text eol=lf
+.editorconfig      text eol=lf
